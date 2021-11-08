@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+:root {
+    --black: #4D4C59;
+    --purple: #6C63FF;
+    --light-grey: #C8C8C8;
+    --text-color: #9C9AB6;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#header img {
+    width: 100%;
+}
+
+main img {
+    width: 45%;
+    border-radius: 5px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 81.25rem;
+    margin: 1rem auto;
+}
+
+.countDown {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.countDown h1 {
+    color: var(--purple);
+    letter-spacing: .5rem;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.countDown span {
+    color: var(--black);
+    font-weight: 300;
+}
+
+button {
+    padding: .5rem 2rem;
+    background-color: var(--purple);
+    border: none;
+    border-radius: 8px;
+    color: var(--light-grey);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: .4s;
+}
+
+button:hover {
+    color: var(--black);
+    background-color: var(--text-color);
+}
+
+.time {
+    text-align: center;
+    display: flex;
+    gap: 2rem;
+}
+
+.time span p {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    line-height: 0;
+}
+
+.time span h3 {
+    font-size: 5rem;
+    font-weight: 300;
+    color: var(--black);
+}
+
+.countDown .countDown__buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.container__modal {
+    padding: 1rem;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.container__modal.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal {
+    position: relative;
+    padding: 1rem;
+    min-width: 40%;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.modal h3 {
+    letter-spacing: .2rem;
+}
+
+.modal #close {
+    position: absolute;
+    font-size: 1rem;
+    color: var(--light-grey);
+    font-weight: 700;
+    top: -.3rem;
+    right: -19px;
+    clip-path: circle();
+}
+
+.modal .error {
+    font-size: .7rem;
+    color: red;
+}
+
+.modal .formValidator__buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: end;
+    margin-top: 1rem;
+}
+
+.formValidator__input {
+    margin-top: 1rem;
+}
+
+.formValidator__input input {
+    padding: .5rem;
+    border-radius: 5px;
+    border: 1px solid var(--light-grey);
+    width: 100%;
+}
+
+@media(max-width:1270px) {
+    .container {
+        justify-content: center;
+        padding: 1rem;
+    }
+    main img {
+        width: 70%;
+        margin: 2rem 0 1rem 0;
+    }
+}
+
+@media(max-width:700px) {
+    main img {
+        width: 100%;
+        order: -1;
+        margin: -2rem 0 1rem 0;
+    }
+    .time span p {
+        font-size: .9rem;
+    }
+    .time span h3 {
+        font-size: 1.8rem;
+    }
+    .countDown h1 {
+        font-size: 1.5rem;
+        letter-spacing: .1rem;
+    }
+    .countDown span {
+        font-size: .7rem;
+    }
+}

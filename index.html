@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>CountDown</title>
+</head>
+
+<body>
+    <header id="header">
+        <img src="assets/img/top-image.svg" alt="">
+    </header>
+
+    <main class="container">
+
+        <div class="countDown">
+            <h1 id="title">Ready to Launch in...</h1>
+            <div class="time">
+
+            </div>
+            <span id="countDown__descricao">Inscreva-se para saber mais sobre o lançamento</span>
+
+            <div class="countDown__buttons">
+                <button id="showModal">Cadastrar</button>
+                <button id="reset" type="reset">Atualizar</button>
+            </div>
+        </div>
+        <img id="logo-produto" src="assets/img/rocket.svg" alt="">
+    </main>
+
+    <div class="container__modal">
+        <div class="modal">
+            <button id="close" type="submit">x</button>
+            <h3>Preencha o Formulário</h3>
+            <form class="formValidator">
+                <div class="formValidator__input">
+                    <label for="">Informe o Título</label>
+                    <input id="titulo" name="titulo" type="text" data-rules="required|min=5" placeholder="Digite o titulo">
+                </div>
+                <div class="formValidator__input">
+                    <label for="">Selecione a data final</label>
+                    <input type="date" name="data" data-rules="required|data" id="date">
+                </div>
+                <div class="formValidator__input">
+                    <label for="">Informe a URL da imagem (opicional)</label>
+                    <input type="text" id="imagem" placeholder="Informe a URL da imagem">
+                </div>
+                <div class="formValidator__input">
+                    <label for="">Informe a descrição do conteúdo (opicional)</label>
+                    <input type="text" id="descricaoParagrafo" placeholder="Informe a descrição do conteudo">
+                </div>
+
+                <div class="formValidator__buttons">
+                    <button id="salvar" type="submit">Enviar</button>
+                    <button id="salvar" type="reset">Limpar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script type="module" src="src/js/main.js"></script>
+    <script src="src/js/Timer.js"></script>
+</body>
+
+</html>
